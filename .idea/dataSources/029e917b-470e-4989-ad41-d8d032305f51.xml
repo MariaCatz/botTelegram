@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.3">
+    <root id="1"/>
+    <database id="2" parent="1" name="test">
+      <ObjectId>28542</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+    </database>
+    <database id="4" parent="1" name="bestpl">
+      <ObjectId>16393</ObjectId>
+    </database>
+    <schema id="5" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Current>1</Current>
+    </schema>
+    <schema id="6" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="9" parent="2" name="information_schema">
+      <ObjectId>12113</ObjectId>
+    </schema>
+    <schema id="10" parent="2" name="public">
+      <ObjectId>29720</ObjectId>
+      <IntrospectionTimestamp>2017-08-30.20:40:41.307</IntrospectionTimestamp>
+      <IntrospectionStateNumber>50014</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <table id="11" parent="10" name="companyrating">
+      <ObjectId>30187</ObjectId>
+      <StateNumber>50008</StateNumber>
+    </table>
+    <table id="12" parent="10" name="usercompanymessage">
+      <ObjectId>30192</ObjectId>
+      <StateNumber>50009</StateNumber>
+    </table>
+    <table id="13" parent="10" name="usercompanyrating">
+      <ObjectId>30197</ObjectId>
+      <StateNumber>50010</StateNumber>
+    </table>
+    <table id="14" parent="10" name="yandexcategory">
+      <ObjectId>30202</ObjectId>
+      <StateNumber>50011</StateNumber>
+    </table>
+    <table id="15" parent="10" name="yandexcompany">
+      <ObjectId>30210</ObjectId>
+      <StateNumber>50013</StateNumber>
+    </table>
+    <table id="16" parent="10" name="yandexcompanyhours">
+      <ObjectId>30218</ObjectId>
+      <StateNumber>50012</StateNumber>
+    </table>
+    <table id="17" parent="10" name="yandexcompanyrating">
+      <ObjectId>30226</ObjectId>
+      <StateNumber>50013</StateNumber>
+    </table>
+    <column id="18" parent="11" name="rating">
+      <Position>1</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>50001</StateNumber>
+    </column>
+    <column id="19" parent="11" name="id">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50001</StateNumber>
+    </column>
+    <index id="20" parent="11" name="companyrating_pkey">
+      <ObjectId>30190</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="21" parent="11" name="companyrating_pkey">
+      <ObjectId>30191</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>companyrating_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="22" parent="11" name="fkhrv8u1qxs8q7vt8xuu99fxsc">
+      <ObjectId>30231</ObjectId>
+      <ColNames>id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="23" parent="12" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50002</StateNumber>
+    </column>
+    <column id="24" parent="12" name="company_id">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>50002</StateNumber>
+    </column>
+    <index id="25" parent="12" name="usercompanymessage_pkey">
+      <ObjectId>30195</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="12" name="usercompanymessage_pkey">
+      <ObjectId>30196</ObjectId>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>usercompanymessage_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="27" parent="12" name="fkprvu0amxdtr1u7h60ph0374lt">
+      <ObjectId>30236</ObjectId>
+      <ColNames>company_id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="28" parent="13" name="user_id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50003</StateNumber>
+    </column>
+    <column id="29" parent="13" name="rating">
+      <Position>2</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>50003</StateNumber>
+    </column>
+    <column id="30" parent="13" name="company_id">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50003</StateNumber>
+    </column>
+    <index id="31" parent="13" name="usercompanyrating_pkey">
+      <ObjectId>30200</ObjectId>
+      <ColNames>user_id
+company_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="32" parent="13" name="usercompanyrating_pkey">
+      <ObjectId>30201</ObjectId>
+      <ColNames>user_id
+company_id</ColNames>
+      <UnderlyingIndexName>usercompanyrating_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="13" name="fkciv37t5l1gvsn2tmt5yk6awhs">
+      <ObjectId>30241</ObjectId>
+      <ColNames>company_id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="34" parent="14" name="name">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50004</StateNumber>
+    </column>
+    <column id="35" parent="14" name="categoryclass">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50004</StateNumber>
+    </column>
+    <column id="36" parent="14" name="company_id">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50004</StateNumber>
+    </column>
+    <index id="37" parent="14" name="yandexcategory_pkey">
+      <ObjectId>30208</ObjectId>
+      <ColNames>name
+company_id
+categoryclass</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="14" name="yandexcategory_pkey">
+      <ObjectId>30209</ObjectId>
+      <ColNames>name
+company_id
+categoryclass</ColNames>
+      <UnderlyingIndexName>yandexcategory_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="39" parent="14" name="fkeqctdv9gayhpm8g0c4m1crdgv">
+      <ObjectId>30246</ObjectId>
+      <ColNames>company_id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="40" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50005</StateNumber>
+    </column>
+    <column id="41" parent="15" name="address">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>50005</StateNumber>
+    </column>
+    <column id="42" parent="15" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>50005</StateNumber>
+    </column>
+    <index id="43" parent="15" name="yandexcompany_pkey">
+      <ObjectId>30216</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="44" parent="15" name="uniquecompany">
+      <ObjectId>30261</ObjectId>
+      <ColNames>name
+address</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="15" name="yandexcompany_pkey">
+      <ObjectId>30217</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>yandexcompany_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="46" parent="15" name="uniquecompany">
+      <ObjectId>30262</ObjectId>
+      <ColNames>name
+address</ColNames>
+      <UnderlyingIndexName>uniquecompany</UnderlyingIndexName>
+    </key>
+    <column id="47" parent="16" name="text">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>50006</StateNumber>
+    </column>
+    <column id="48" parent="16" name="id">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50006</StateNumber>
+    </column>
+    <index id="49" parent="16" name="yandexcompanyhours_pkey">
+      <ObjectId>30224</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="16" name="yandexcompanyhours_pkey">
+      <ObjectId>30225</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>yandexcompanyhours_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="51" parent="16" name="fkcspyb1jtq72sdmovsrtrohhtx">
+      <ObjectId>30251</ObjectId>
+      <ColNames>id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="52" parent="17" name="rating">
+      <Position>1</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>50007</StateNumber>
+    </column>
+    <column id="53" parent="17" name="id">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>50007</StateNumber>
+    </column>
+    <index id="54" parent="17" name="yandexcompanyrating_pkey">
+      <ObjectId>30229</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="55" parent="17" name="yandexcompanyrating_pkey">
+      <ObjectId>30230</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>yandexcompanyrating_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="56" parent="17" name="fk7ssoak1dlietgl3riqn2jwycd">
+      <ObjectId>30256</ObjectId>
+      <ColNames>id</ColNames>
+      <RefTableId>30210</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>yandexcompany</RefTableName>
+      <RefKeyName>yandexcompany_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
