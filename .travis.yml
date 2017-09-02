@@ -1,0 +1,11 @@
+language: java
+jdk:
+  - oraclejdk8
+service:
+ - postgresql
+before_script:
+ - psql -c 'create database bestpl;' -U postgres
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script:
+  - mvn test
