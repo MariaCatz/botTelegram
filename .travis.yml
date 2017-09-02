@@ -9,3 +9,8 @@ install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
   - mvn test
+deploy:
+  provider: heroku
+  api_key: a4a66747-1d5a-46d1-af38-e98176da9c35
+    secure: herokubottelegram
+  app: herokubottelegram
